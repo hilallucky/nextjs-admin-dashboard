@@ -1,9 +1,12 @@
 import Image from "next/image";
 import { Product } from "@/types/product";
+import nextConfig from "@/../next.config";
+
+const imagePath = `${nextConfig.basePath}/images/product/`;
 
 const productData: Product[] = [
   {
-    image: "/images/product/product-01.png",
+    image: `${imagePath}product-01.png`,
     name: "Apple Watch Series 7",
     category: "Electronics",
     price: 296,
@@ -11,7 +14,7 @@ const productData: Product[] = [
     profit: 45,
   },
   {
-    image: "/images/product/product-02.png",
+    image: `${imagePath}product-02.png`,
     name: "Macbook Pro M1",
     category: "Electronics",
     price: 546,
@@ -19,7 +22,7 @@ const productData: Product[] = [
     profit: 125,
   },
   {
-    image: "/images/product/product-03.png",
+    image: `${imagePath}product-03.png`,
     name: "Dell Inspiron 15",
     category: "Electronics",
     price: 443,
@@ -27,7 +30,7 @@ const productData: Product[] = [
     profit: 247,
   },
   {
-    image: "/images/product/product-04.png",
+    image: `${imagePath}product-04.png`,
     name: "HP Probook 450",
     category: "Electronics",
     price: 499,

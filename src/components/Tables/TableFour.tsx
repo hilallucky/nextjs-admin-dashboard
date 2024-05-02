@@ -1,10 +1,13 @@
 import { BRAND } from "@/types/brand";
 import Image from "next/image";
 import DropdownDefault from "../Dropdowns/DropdownDefault";
+import nextConfig from "@/../next.config";
+
+const imagePath = `${nextConfig.basePath}/images/brand/`;
 
 const brandData: BRAND[] = [
   {
-    logo: "/images/brand/brand-01.svg",
+    logo: `${imagePath}brand-01.svg`,
     name: "Google",
     visitors: 3.5,
     revenues: "5,768",
@@ -12,7 +15,7 @@ const brandData: BRAND[] = [
     conversion: 4.8,
   },
   {
-    logo: "/images/brand/brand-02.svg",
+    logo: `${imagePath}brand-02.svg`,
     name: "Twitter",
     visitors: 2.2,
     revenues: "4,635",
@@ -20,7 +23,7 @@ const brandData: BRAND[] = [
     conversion: 4.3,
   },
   {
-    logo: "/images/brand/brand-06.svg",
+    logo: `${imagePath}brand-06.svg`,
     name: "Youtube",
     visitors: 2.1,
     revenues: "4,290",
@@ -28,7 +31,7 @@ const brandData: BRAND[] = [
     conversion: 3.7,
   },
   {
-    logo: "/images/brand/brand-04.svg",
+    logo: `${imagePath}brand-04.svg`,
     name: "Vimeo",
     visitors: 1.5,
     revenues: "3,580",
@@ -36,7 +39,7 @@ const brandData: BRAND[] = [
     conversion: 2.5,
   },
   {
-    logo: "/images/brand/brand-05.svg",
+    logo: `${imagePath}brand-05.svg`,
     name: "Facebook",
     visitors: 3.5,
     revenues: "6,768",

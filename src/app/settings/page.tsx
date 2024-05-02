@@ -2,6 +2,9 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import Image from "next/image";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import nextConfig from "@/../next.config";
+
+const imagePath = `${nextConfig.basePath}/images/user/`;
 
 export const metadata: Metadata = {
   title: "Next.js Settings | TailAdmin - Next.js Dashboard Template",
@@ -229,7 +232,7 @@ const Settings = () => {
                   <div className="mb-4 flex items-center gap-3">
                     <div className="h-14 w-14 rounded-full">
                       <Image
-                        src={"/images/user/user-03.png"}
+                        src={`${imagePath}user-03.png`}
                         width={55}
                         height={55}
                         alt="User"
