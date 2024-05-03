@@ -13,9 +13,11 @@ import DatePickerTwo from "@/components/FormElements/DatePicker/DatePickerTwo";
 import DatePickerOne from "@/components/FormElements/DatePicker/DatePickerOne";
 import MultiSelect from "@/components/FormElements/MultiSelect";
 import SelectGroupTwo from "@/components/SelectGroup/SelectGroupTwo";
-import TextInput from "../common/Custom/CustomText";
+import TextInput from "../common/Input/CustomText";
 import { useState } from "react";
-import CustomSelect from "../common/Custom/CustomSelect";
+import CustomSelect from "../common/Input/CustomSelect";
+import CustomMultiSelect from "../common/Input/CustomMultiSelect";
+import CustomTextArea from "../common/Input/CustomTextArea";
 
 interface Product {
     id: string;
@@ -186,6 +188,19 @@ const FormElements = () => {
                                     className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary dark:disabled:bg-black"
                                 ></textarea>
                             </div>
+
+                            <div className="">
+                                <CustomTextArea
+                                    name="description"
+                                    label="Description"
+                                    placeholder="Description"
+                                    required={false}
+                                    disabled={true}
+                                    status="active"
+                                />
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -233,7 +248,7 @@ const FormElements = () => {
 
 
 
-                    <div className="">
+                    <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                         <CustomSelect
                             label="Product"
                             items={products}
@@ -244,7 +259,7 @@ const FormElements = () => {
                                 setSelectedProductId(value);
                                 setSelectedProduct(selectedValue);
                             }}
-                            icons={<svg
+                            icon={<svg
                                 width="20"
                                 height="20"
                                 viewBox="0 0 20 20"
@@ -272,6 +287,16 @@ const FormElements = () => {
                                     ></path>
                                 </g>
                             </svg>}
+                        />
+
+
+                        <CustomMultiSelect
+                            id="customMultiSelect"
+                            label="Product"
+                            items={products}
+                            value={selectedProductId}
+                            labelExtractor={({ name }) => name}
+                            valueExtractor={({ id }) => id}
                         />
                         <div>
                             <small className=" whitespace-pre">

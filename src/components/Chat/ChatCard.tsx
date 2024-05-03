@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Chat } from "@/types/chat"; import nextConfig from "@/../next.config";
+import { Chat } from "@/types/chat"; 
+import nextConfig from "@/../next.config";
 
 const imagePath = `${nextConfig.basePath}/images/user/`;
 

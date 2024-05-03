@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import nextConfig from "@/../next.config";
+
+const imagePath = `${nextConfig.basePath}/images/user/`;
 
 const DropdownMessage = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -104,7 +107,7 @@ const DropdownMessage = () => {
                 <Image
                   width={112}
                   height={112}
-                  src={"/images/user/user-02.png"}
+                  src={ `${imagePath}user-02.png`}
                   alt="User"
                   style={{
                     width: "auto",
@@ -131,7 +134,7 @@ const DropdownMessage = () => {
                 <Image
                   width={112}
                   height={112}
-                  src={"/images/user/user-01.png"}
+                  src={ `${imagePath}user-01.png`}
                   alt="User"
                   style={{
                     width: "auto",
@@ -158,7 +161,7 @@ const DropdownMessage = () => {
                 <Image
                   width={112}
                   height={112}
-                  src={"/images/user/user-03.png"}
+                  src={ `${imagePath}user-03.png`}
                   alt="User"
                   style={{
                     width: "auto",
@@ -185,7 +188,7 @@ const DropdownMessage = () => {
                 <Image
                   width={112}
                   height={112}
-                  src={"/images/user/user-04.png"}
+                  src={ `${imagePath}user-04.png`}
                   alt="User"
                   style={{
                     width: "auto",
@@ -212,7 +215,7 @@ const DropdownMessage = () => {
                 <Image
                   width={112}
                   height={112}
-                  src={"/images/user/user-02.png"}
+                  src={ `${imagePath}user-02.png`}
                   alt="User"
                   style={{
                     width: "auto",
