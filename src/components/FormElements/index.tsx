@@ -13,7 +13,7 @@ import DatePickerTwo from "@/components/FormElements/DatePicker/DatePickerTwo";
 import DatePickerOne from "@/components/FormElements/DatePicker/DatePickerOne";
 import MultiSelect from "@/components/FormElements/MultiSelect";
 import SelectGroupTwo from "@/components/SelectGroup/SelectGroupTwo";
-import TextInput from "../common/Input/CustomText";
+import CustomText from "../common/Input/CustomText";
 import { useState } from "react";
 import CustomSelect from "../common/Input/CustomSelect";
 import CustomMultiSelect from "../common/Input/CustomMultiSelect";
@@ -235,7 +235,7 @@ const FormElements = () => {
 
                     <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                         <div className="flex flex-col gap-5.5 p-6.5">
-                            <TextInput
+                            <CustomText
                                 name="id"
                                 label="Product ID"
                                 required={true}

@@ -24,7 +24,7 @@ const CustomTableWithImage = <DataType extends { name: string },>({
                 </h4>
             </div>
 
-            {/* <div className="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
+            {/* <div className="grid grid-cols-6 border-t bborderorder-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
                 {items.map((item, index) => {
                     // const itemLabel = labelExtractor(item);
                     // const itemValue = valueExtractor(item);

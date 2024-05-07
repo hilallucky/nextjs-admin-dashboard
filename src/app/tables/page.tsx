@@ -11,6 +11,7 @@ import nextConfig from "@/../next.config";
 import { Product } from "@/types/product";
 import { useState } from "react";
 import CustomTableWithDynamicData from "@/components/common/Table/CustomTableWithDynamicData";
+import DataTable from "@/components/common/Table/CustomTableWithDynamicDataTwo";
 
 const imagePath = `${nextConfig.basePath}/images/product/`;
 
@@ -112,6 +113,12 @@ const TablesPage = () => {
                     data={productData}
                     containImage={true}
                     imageColumn={1}
+                    label="product data"
+                />
+
+                <DataTable
+                    data={productData}
+                    resourceTitle="brands"
                     label="product data"
                 />
                 {/* Other components or content here */}
