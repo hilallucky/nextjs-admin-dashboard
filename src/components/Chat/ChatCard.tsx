@@ -8,7 +8,8 @@ const imagePath = `${nextConfig.basePath}/images/user/`;
 
 const chatData: Chat[] = [
     {
-        avatar: `${imagePath}user-01.png`,
+        // avatar: `${imagePath}user-01.png`,
+        avatar: "",
         name: "Devid Heilo",
         text: "How are you?",
         time: 12,
@@ -16,7 +17,7 @@ const chatData: Chat[] = [
         dot: 3,
     },
     {
-        avatar: `${imagePath}user-02.png`,
+        avatar: "",
         name: "Henry Fisher",
         text: "Waiting for you!",
         time: 12,
@@ -24,7 +25,7 @@ const chatData: Chat[] = [
         dot: 1,
     },
     {
-        avatar: `${imagePath}user-04.png`,
+        avatar: "",
         name: "Jhon Doe",
         text: "What's up?",
         time: 32,
@@ -32,7 +33,7 @@ const chatData: Chat[] = [
         dot: 3,
     },
     {
-        avatar: `${imagePath}user-05.png`,
+        avatar: "",
         name: "Jane Doe",
         text: "Great",
         time: 32,
@@ -40,7 +41,7 @@ const chatData: Chat[] = [
         dot: 6,
     },
     {
-        avatar: `${imagePath}user-01.png`,
+        avatar: "",
         name: "Jhon Doe",
         text: "How are you?",
         time: 32,
@@ -48,7 +49,7 @@ const chatData: Chat[] = [
         dot: 3,
     },
     {
-        avatar: `${imagePath}user-03.png`,
+        avatar: "",
         name: "Jhon Doe",
         text: "How are you?",
         time: 32,

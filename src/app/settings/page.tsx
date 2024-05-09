@@ -232,7 +232,8 @@ const Settings = () => {
                   <div className="mb-4 flex items-center gap-3">
                     <div className="h-14 w-14 rounded-full">
                       <Image
-                        src={`${imagePath}user-03.png`}
+                        // src={`${imagePath}user-03.png`}
+                        src=""
                         width={55}
                         height={55}
                         alt="User"
