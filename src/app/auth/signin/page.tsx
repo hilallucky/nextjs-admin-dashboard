@@ -1,29 +1,58 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import nextConfig from "@/../next.config";
-import { useRouter } from "next/router";
+import { useRouter, useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 
-export const metadata: Metadata = {
-    title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-    description: "This is Next.js Signin Page TailAdmin Dashboard Template",
-};
+// export const metadata: Metadata = {
+//     title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
+//     description: "This is Next.js Signin Page TailAdmin Dashboard Template",
+// };
 
 const SignIn: React.FC = () => {
     const basePath = nextConfig.basePath;
+    const router = useRouter();
+    const searchParams = useSearchParams()
+    const callbackUrl = searchParams.get('callbackUrl') || '/'
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
 
-    // const router = useRouter();
+    const handleSubmit = async (event: React.FormEvent) => {
+        event.preventDefault();
+
+        console.log({ email, password });
+
+        try {
+            const res = await signIn('credentials', {
+                redirect: false,
+                email,
+                password,
+                callbackUrl
+            })
+            console.log('Res', res)
+            if (!res?.error) {
+                router.push(callbackUrl)
+            } else {
+                setError('Invalid email or password')
+            }
+        } catch (err: any) { }
+
+    };
 
     // //validasi form
 
     return (
         <>
             {/* <Breadcrumb pageName="Sign In" /> */}
-            <div className="w-full flex flex-wrap bg-black">
-                <div className="w-96 h-full m-10 rounded-lg border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+            <div className="w-full md:h-full flex flex-wrap justify-center items-center xl:bg-black md:bg-none ">
+                <div className="w-96 h-full md:h-full m-10 rounded-lg border border-stroke bg-white shadow-default md:bg-none dark:border-strokedark dark:bg-boxdark">
 
                     <div className="flex flex-wrap items-center">
 
@@ -33,7 +62,7 @@ const SignIn: React.FC = () => {
                                     Sign In
                                 </h2>
 
-                                <form>
+                                <form onSubmit={handleSubmit} className="">
                                     <div className="mb-4">
                                         <label className="mb-2.5 block font-medium text-black dark:text-white">
                                             Email
@@ -42,6 +71,7 @@ const SignIn: React.FC = () => {
                                             <input
                                                 type="email"
                                                 placeholder="Enter your email"
+                                                onChange={(e) => setEmail(e.target.value)}
                                                 className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                             />
 
@@ -67,13 +97,14 @@ const SignIn: React.FC = () => {
 
                                     <div className="mb-6">
                                         <label className="mb-2.5 block font-medium text-black dark:text-white">
-                                            Re-type Password
+                                            Password
                                         </label>
                                         <div className="relative">
                                             <input
                                                 type="password"
                                                 placeholder="6+ Characters, 1 Capital letter"
-                                                className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-white outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                                                onChange={(e) => setPassword(e.target.value)}
+                                                className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black dark:text-white outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                             />
 
                                             <span className="absolute right-4 top-4">

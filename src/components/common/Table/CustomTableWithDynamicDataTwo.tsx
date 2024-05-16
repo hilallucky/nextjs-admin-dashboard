@@ -24,7 +24,11 @@ const DataTable = <DataType,>({
     // Filtered data based on search text
     const filteredData = data?.filter((item) => {
         // Customize this filter logic based on your data structure
-        return Object.values(item).some((value) => value.includes(searchText));
+        // return Object.values(item).some((value) => value.includes(searchText));
+        return Object.values(item).some((value: any) => {
+            const valueString = value?.toString ? value.toString() : '';
+            return valueString.includes(searchText);
+        });
     });
 
     return (

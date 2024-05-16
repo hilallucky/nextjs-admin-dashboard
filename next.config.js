@@ -4,13 +4,13 @@
 //     basePath: '/dashboard'
 // };
 
-// export default nextConfig;
+// export default nextConfig;"
 
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // reactStrictMode: true,
-    // basePath: '/dashboard'
+    basePath: ''
   };
   
   module.exports = nextConfig;
