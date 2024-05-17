@@ -27,8 +27,6 @@ const SignIn: React.FC = () => {
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
 
-        console.log({ email, password });
-
         try {
             const res = await signIn('credentials', {
                 redirect: false,
@@ -130,6 +128,8 @@ const SignIn: React.FC = () => {
                                             </span>
                                         </div>
                                     </div>
+
+                                    {error && <div className="flex w-full text-red justify-center items-center">{error}</div>}
 
                                     <div className="mb-5">
                                         <input

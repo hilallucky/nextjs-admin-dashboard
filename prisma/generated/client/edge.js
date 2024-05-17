@@ -120,7 +120,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/media/hilal/data-400GB/My-Projects/Samples/nextjs-admin-dashboard/prisma/generated/client",
+      "value": "F:\\Hilal's Folder\\Projects\\Development\\Applications\\nextjs-admin-dashboard\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -129,7 +129,7 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
+        "value": "windows",
         "native": true
       }
     ],
@@ -147,6 +147,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
