@@ -99,32 +99,13 @@ const TablesPage = () => {
             <Breadcrumb pageName="Tables" />
 
             <div className="flex flex-col gap-10">
-                <TableOne />
-                <TableTwo />
-                <CustomTableWithImage
-                    id="product"
-                    label="Product Data"
-                    items={productData}
-                // labelExtractor={({ name }) => name}
-                // valueExtractor={({ id }) => id}
-                />
-
-                <CustomTableWithDynamicData
-                    data={productData}
-                    containImage={true}
-                    imageColumn={1}
-                    label="product data"
-                />
 
                 <DataTable
                     data={productData}
                     resourceTitle="brands"
                     label="product data"
                 />
-                {/* Other components or content here */}
-
-
-                <TableThree />
+                
             </div>
         </DefaultLayout>
     );

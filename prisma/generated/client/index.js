@@ -121,7 +121,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "F:\\Hilal's Folder\\Projects\\Development\\Applications\\nextjs-admin-dashboard\\prisma\\generated\\client",
+      "value": "C:\\xampp\\htdocs\\nextjs-admin-dashboard\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -148,7 +148,7 @@ const config = {
     "db"
   ],
   "activeProvider": "mysql",
-  "postinstall": false,
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {

@@ -42,32 +42,42 @@ const DataTable = <DataType,>({
 
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
 
-                <div className="relative flex flex-1 flex-shrink-0 pb-15">
-                    <div className="absolute right-3">
-                        <input
+                <div className="relative flex justify-end flex-shrink-0 pb-15">
+                    <div className="">
+                        
+                            <input
                             type="text"
                             placeholder="Search..."
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
-                            className="w-60 right-3 rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            className="w-60 rounded-lg border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                         />
+                        
+                        <div className="absolute top-6 px-4 right-45">
+                            <div className="h-[18px] w-[18px] -translate-y-1/2 text-white peer-focus:text-gray-900">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#000000"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="arcs"
+                                >
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div className=" absolute right-5 top-7 h-[18px] w-[18px] -translate-y-1/2 text-white peer-focus:text-gray-900">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="18"
-                            height="18"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="arcs"
-                        >
-                            <circle cx="11" cy="11" r="8" />
-                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                        </svg>
+                    
+                    <div className="h-[50px] w-[150px] bg-primary mx-4 rounded-lg text-white flex justify-center">
+                        <button>add Product</button>
                     </div>
+                    
                 </div>
 
                 {
